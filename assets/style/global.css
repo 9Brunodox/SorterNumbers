@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Content */
+  --content-primary: #ffffff;
+  --content-secondary: #c7c9cc;
+  --content-tertiary: #d9d9d9;
+  --content-brand: #c58de7;
+  --color-inverse: #030203;
+
+  /* Background */
+  --bg-primary: #020202;
+  --bg-secondary: #111012;
+  --bg-tertiary: #24222e;
+  --bg-brand: #c58de7;
+  --bg-gray: #3d3d3d;
+
+  /* Accent */
+  --accent-pink: #d586e0;
+  --accent-blue: #91a1fa;
+  --accent-green: #77c0af;
+  --accent-lime: #d1dc97;
+  --accent-red: #e9a9b3;
+
+  /* Gradient */
+  --gradient-border: linear-gradient(
+    to right,
+    var(--accent-green) 0%,
+    var(--accent-lime) 14.84%,
+    var(--accent-red) 32.15%,
+    var(--accent-pink) 65.79%,
+    var(--accent-blue) 84.58%
+  );
+  --gradient-bg: linear-gradient(
+    to right,
+    var(--accent-pink) 0%,
+    var(--accent-blue) 98.93%
+  );
+  --gradient-content: linear-gradient(
+    to right,
+    var(--content-secondary) 0%,
+    var(--bg-gray) 100%
+  );
+
+  /* Fonts */
+  --ff-sora: "Sora", sans-serif;
+  --ff-rbt-mono: "Roboto Mono", monospace;
+  --ff-rbt-flex: "Roboto Flex", sans-serif;
+
+  --fw-xbold: 800;
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-medium: 500
+  --fw-regular: 400;
+
+  /* Sora */
+  --display-lg: var(--fw-xbold) 7.2rem/130% var(-ff-sora);
+  --display-md: var(--fw-xbold) 4rem/130% var(-ff-sora);
+  --display-sm: var(--fw-bold) 7.2rem/130% var(-ff-sora);
+
+  /* Robot Mono */
+  --overline: var(--fw-bold) 1.6rem/150% var(--ff-rbt-mono);
+
+  /* Robot Flex */
+  --paragraph-lg: var(--fw-medium) 1.6rem/150% var(--ff-rbt-flex);
+  --paragraph-md: var(--fw-medium) 1.4rem/150% var(--ff-rbt-flex);
+  --paragraph-sm: var(--fw-medium) 1.2rem/150% var(--ff-rbt-flex);
+  --label-medium: var(--fw-bold) 2rem/150% var(--ff-rbt-flex);
+  --label-sm: var(--fw-bold) 1.6rem/150% var(--ff-rbt-flex);
+
+}
+
+html {
+  font-size: 10px;
+}
+
+.display-lg{
+    font: var(--display-lg);
+    text-transform: uppercase;
+}
+
+.display-md{
+    font: var(--display-md);
+    text-transform: uppercase;
+}
+
+.display-sm{
+    font: var(--display-sm);
+    text-transform: uppercase;
+}
+
+.paragraph-lg{
+    font: var(--paragraph-lg);
+}
+
+.paragraph-md{
+    font: var(--paragraph-md);
+}
+
+.paragraph-sm{
+    font: var(--paragraph-sm);
+}
+
+.label-md{
+    font: var(--label-medium);
+}
+
+.label-sm{
+    font: var(--label-sm);
+}
