@@ -1,0 +1,85 @@
+.content {
+  & .content-title {
+    & p {
+      background: var(--gradient-content);
+      -webkit-background-clip: text; /* Safari/Chrome */
+      background-clip: text; /* Padrão (para navegadores modernos) */
+
+      /* Precisamos “zerar” a cor do texto para que apareça só o background */
+      -webkit-text-fill-color: transparent; /* Safari/Chrome */
+      color: transparent;
+    }
+    & h1 {
+      font: var(--display-md);
+      margin-top: 0.8rem;
+    }
+  }
+}
+
+.questions {
+  margin-top: 3.8rem;
+  & span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    & p {
+      color: var(--content-brand);
+      font: var(--paragraph-md);
+    }
+  }
+  & .response {
+    font: var(--paragraph-sm);
+    color: var(--content-secondary);
+    margin-left: 3.2rem;
+  }
+}
+
+@media (width >= 1280px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "title form"
+      "info form";
+    & .content-title {
+      & h1 {
+        font: var(--display-lg);
+        margin-top: 1.2rem;
+        width: 100%;
+      }
+    }
+  }
+
+  .title-area {
+    grid-area: title;
+    width: 51rem;
+  }
+
+  .form-area {
+    grid-area: form;
+  }
+
+  .info-area {
+    grid-area: info;
+  }
+
+  .questions {
+    margin-top: 3.8rem;
+    max-width: 38.6rem;
+    & span {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      & p {
+        color: var(--content-brand);
+        font: var(--paragraph-md);
+      }
+    }
+    & .response {
+      font: var(--paragraph-sm);
+      color: var(--content-secondary);
+      margin-left: 3.2rem;
+    }
+  }
+}

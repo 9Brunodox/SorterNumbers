@@ -54,13 +54,13 @@
   --fw-xbold: 800;
   --fw-bold: 700;
   --fw-semibold: 600;
-  --fw-medium: 500
+  --fw-medium: 500;
   --fw-regular: 400;
 
   /* Sora */
-  --display-lg: var(--fw-xbold) 7.2rem/130% var(-ff-sora);
-  --display-md: var(--fw-xbold) 4rem/130% var(-ff-sora);
-  --display-sm: var(--fw-bold) 7.2rem/130% var(-ff-sora);
+  --display-lg: var(--fw-xbold) 7.2rem/130% var(--ff-sora);
+  --display-md: var(--fw-xbold) 4rem/130% var(--ff-sora);
+  --display-sm: var(--fw-bold) 3.2rem/130% var(--ff-sora);
 
   /* Robot Mono */
   --overline: var(--fw-bold) 1.6rem/150% var(--ff-rbt-mono);
@@ -76,6 +76,12 @@
 
 html {
   font-size: 10px;
+}
+
+body{
+  background-image: url(../images/background.png);
+  background-color: var(--bg-primary);
+  color: var(--content-primary);
 }
 
 .display-lg{
@@ -111,4 +117,23 @@ html {
 
 .label-sm{
     font: var(--label-sm);
+}
+
+.overline{
+  font: var(--overline);
+  color: var(--gradient-content);
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+  margin: 0 3.5rem;
+}
+
+@media(width >=1280px){
+  #container{
+    justify-content: center;
+    height: 100vh;
+    margin: 0 13.5rem;
+  }
 }
