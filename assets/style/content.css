@@ -1,4 +1,7 @@
 .content {
+  display: grid;
+  grid-template-columns: 1fr;
+
   & .content-title {
     & p {
       background: var(--gradient-content);
@@ -14,6 +17,18 @@
       margin-top: 0.8rem;
     }
   }
+}
+
+.title-area {
+  order: 1;
+}
+
+.form-area {
+  order: 2;
+}
+
+.info-area {
+  order: 3; 
 }
 
 .questions {

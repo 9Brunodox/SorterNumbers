@@ -1,0 +1,27 @@
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  & .input-content {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+      font: var(--label-sm);
+      color: var(--content-secondary);
+      text-align: center;
+    }
+  }
+}
+
+input[type="number"] {
+  all: unset;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  padding: 0.4rem 0.8rem;
+  font: var(--display-sm);
+  width: 90%;
+  background-color: var(--bg-secondary);
+  border-radius: 0.8rem;
+  color: var(--content-primary);
+}
