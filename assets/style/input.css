@@ -1,5 +1,6 @@
 .input-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   justify-content: center;
   gap: 1.2rem;
 
@@ -111,4 +112,21 @@ input[type="number"] {
 .gradient-border:hover::before,
 .gradient-border:focus-within::before {
   opacity: 1;
+}
+
+@media (width >= 1280px) {
+  input[type="number"] {
+    all: unset;
+    display: flex;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    padding: 0.4rem 0.8rem;
+    font: var(--display-sm);
+    width: 100%;
+    max-width: 91rem;
+    background-color: var(--bg-secondary);
+    border-radius: 0.8rem;
+    color: var(--content-primary);
+    text-align: center;
+  }
 }

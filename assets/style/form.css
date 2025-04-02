@@ -1,4 +1,4 @@
-.form {
+form {
   & .form-container {
     display: flex;
     align-items: center;
@@ -76,9 +76,8 @@
   }
 }
 
-
 @media (width >= 1280px) {
-  .form {
+  form {
     & .form-container {
       margin: 4.2rem 0 4.2rem 9rem;
 
