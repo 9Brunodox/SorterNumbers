@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     margin: 4rem auto;
+
     & .form-header {
       & h3 {
         font: var(--label-medium);
@@ -17,14 +18,70 @@
 
     & .form-content {
       margin-top: 4rem;
+      width: 100%;
+
+      & .sorter-container {
+        margin-top: 4rem;
+        width: 100%;
+
+        & button {
+          all: unset;
+          display: flex;
+          justify-content: center;
+          gap: 0.8rem;
+          background-color: var(--bg-tertiary);
+          border-radius: 0.8rem;
+          width: 90%;
+          padding: 1.6rem;
+          position: relative;
+          cursor: pointer;
+          overflow: hidden;
+
+          & span {
+            font: var(--label-medium);
+            color: var(--content-primary);
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+          }
+          & img {
+            width: 2.4rem;
+            margin-top: 0.2rem;
+            position: relative;
+            z-index: 1;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-border);
+            border-radius: inherit;
+            padding: 2px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box,
+              linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+          }
+
+          &:hover::before,
+          &:active::before {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }
+
 
 @media (width >= 1280px) {
   .form {
     & .form-container {
       margin: 4.2rem 0 4.2rem 9rem;
+
       & .form-header {
         align-items: flex-end;
         & h3 {
