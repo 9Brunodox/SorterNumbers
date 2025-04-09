@@ -51,7 +51,8 @@ Lucky Numbers é um sorteador de números com uma interface intuitiva e uma expe
 
 2. Abra o arquivo ```index.html``` diretamente no navegador.
 
-📌 Autor
+📌 Autor:
+
 Feito com ❤️ por Bruno Moreira da Silva
 
 ### 📸 Visual do projeto:
